@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Net Druk Wide";
+    src: url(fonts/FontsFree-Net-Druk-Wide-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Anybody";
+    src: url(fonts/Anybody-VariableFont_wdth\,wght.ttf);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+body:before {
+    content: "";
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+header {
+    position: relative;
+}
+
+#navbar {
+    width: 100%;
+    background-color: white;
+}
+
+#nav-container {
+    display: flex;
+    height: 40vh;
+}
+
+.bienvenue {
+    font-family: "Anybody", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-top: 4vh;
+    padding-left: 2.5vw;
+    color: #e8a6d7;
+}
+
+#navbar ul {
+    width: 30%;
+    list-style: none;
+    position: absolute;
+    bottom: 3vh;
+}
+
+#navbar li {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: "Anybody", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    max-height: 2vh;
+    transition: ease-in-out 0.2s;
+}
+
+a:hover {
+    padding-left: 2vw;
+}
+
+.title {
+    font-family: "Net Druk Wide", sans-serif;
+    text-align: end;
+    font-size: 5rem;
+    letter-spacing: 0.1rem;
+}
+
+.title span {  
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    transition: ease-in-out 0.2s;
+}
+
+.title span:hover {
+    color: black;
+    cursor: pointer;
+}
+
+#top {
+    position: absolute;
+    bottom: 0.2vh;
+    right: 2vw;
+}
+
+#bottom {
+    position: absolute;
+    top: 40vh;
+    right: 2vw;
+}
+
+.card-container {
+    font-weight: 600;
+    display: flex;
+    width: 60%;
+    height: 80vh;
+    perspective: 1000px;
+    margin: 30vh auto 30vh;
+    padding: 40px;
+}
+
+.card-inner {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.card-container:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+
+.card-front, .card-back {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 5px rgba(48, 48, 48, 0.2);
+}
+
+.card-front {
+    font-family: "Net Druk Wide", sans-serif; 
+    background-color: white;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    font-family: "Anybody", sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.pres li {
+    list-style-image: url(images/empty-star.png);
+}
+
+.pink-thin {
+    color: #e8a6d7 !important;
+    font-weight: 300 !important;
+}
+
+.card-back .titre-pres {
+    font-family: "Net Druk Wide", sans-serif;
+    width: 80%;
+    font-size: 2rem;
+    text-align: center;
+    color: #e8a6d7;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    width: 80%;
+}
+
+.card-back .pres {
+    width: 80%;
+}
+
+.white-block {
+    background-color: white;
+    height: 220vh;
+}
+
+.gros-titre-comp {
+    font-family: "Net Druk Wide", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    height: 6vh;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10vh 0;
+}
+
+.line {
+    width: 70%;
+    height: 0.2vh;
+    margin: 0 auto;
+    margin-top: 3vh;
+    background-color: black;
+}
+
+.comp {
+    width: 80%;
+}
+
+.comp-titre {
+    font-family: "Net Druk Wide", sans-serif;
+    font-size: 1.4rem;
+    padding: 10vh 0 0 14.5vw;
+}
+
+.comp-sous-titre {
+    font-family: "Anybody", sans-serif;
+    font-weight: 600;
+    padding: 6vh 0 0 14.5vw;
+}
+
+.images {
+    padding: 6vh 0 0 14.5vw;
+}
+
+#compétences img {
+    height: 110px;
+    width: 110px;
+    background-color: black;
+    object-fit: contain;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+#proj {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projets-title {
+    font-family: "Net Druk Wide", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 25vh;
+    padding: 10vh 0;
+    width: 85%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 5px 10px 5px rgba(48, 48, 48, 0.2);
+}
+
+#projets {
+    margin: 15vh 0;
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+}
+
+
+.card {
+    border: 0px;
+    box-shadow: 0px 5px 10px 5px rgba(48, 48, 48, 0.2);
+    transition: ease-in-out 0.3s;
+}
+
+.card:hover {
+    scale: 1.05;
+}
+
+.card-body {
+    font-family: "Anybody", sans-serif;   
+    text-align: justify;
+}
+
+.title-projet {
+    font-family: "Net Druk Wide", sans-serif;
+    text-align: center;
+    font-weight: 500;
+    color: #e8a6d7;
+    padding-bottom: 20px;
+}
+
+#contact {
+    width: 100%;
+    height: 90vh;
+    background-color: white;
+}
+
+.titre-contact {
+    font-family: "Net Druk Wide", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    height: 6vh;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10vh 0;
+}
+
+.infos-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15vh;
+    font-family: "Anybody", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.infos-contact a {
+    font-family: "Anybody", sans-serif;
+    font-size: 1.4rem;
+    color: #e8a6d7 !important;
+    font-weight: 400 !important;
+}
+
+.infos-contact li {
+    padding: 3vh 0 1vh 3vh;
+    width: 80%;
+    list-style-image: url(images/empty-star.png);
+}
+
+#linkedin:hover {
+    padding-left: 0;
+    color: #926486 !important;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Anybody", sans-serif;
+    font-size: 1.2rem;
+    background-color: #f4c1e7;
+    height: 30vh;
+}
+
+@media only screen and (max-width: 900px) {
+    .title {
+        font-family: "Net Druk Wide", sans-serif;
+        text-align: end;
+        font-size: 2.5rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .bienvenue {
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 2vh 0;
+    }
+
+    #nav-container {
+        display: flex;
+        height: 30vh;
+    }
+
+    #navbar ul {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        bottom: 15vh;
+    }
+    
+    #navbar li {
+        padding: 1.5vh 0 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+        font-family: "Anybody", sans-serif;
+        font-size: 0.6rem;
+        font-weight: 700;
+        transition: ease-in-out 0.2s;
+    }
+
+    a:hover {
+        padding-left: 0;
+    }
+
+    #top {
+        bottom: 0;
+        right: 3vw;
+    }
+    
+    #bottom {
+        top: 30vh;
+        right: 3vw;
+    }
+
+    .title span {  
+        -webkit-text-stroke: 1px black;
+    }
+
+    .card-container {
+        width: 100%;
+        height: 50vh;
+        margin: 15vh auto 15vh;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-back .titre-pres {
+        font-size: 1.2rem;
+    }
+
+    .card-back .pres {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+
+    .white-block {
+        height: 155vh;
+    }
+    
+    .gros-titre-comp {
+        font-size: 1.5rem;
+    }
+    
+    .line {
+        width: 70%;
+        height: 0.2vh;
+        margin: 0 auto;
+        margin-top: 3vh;
+        background-color: black;
+    }
+    
+    .comp {
+        width: 80%;
+    }
+    
+    .comp-titre {
+        font-family: "Net Druk Wide", sans-serif;
+        font-size: 1.2rem;
+        padding: 5vh 0 0 14.5vw;
+    }
+    
+    .comp-sous-titre {
+        font-family: "Anybody", sans-serif;
+        font-weight: 600;
+        margin-bottom: 0;
+        padding-top: 2vh;
+        padding-bottom: 0;
+    }
+    
+    .images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 2vh;
+        padding-bottom: 3vh;
+    }
+    
+    #compétences img {
+        height: 80px;
+        width: 80px;
+        margin-bottom: 2vh;
+        padding: 12px;
+        border-radius: 30px;
+    }
+
+    .projets-title {
+        font-size: 1.5rem;
+        margin-top: 15vh;
+        margin-bottom: 0;
+        padding: 5vh 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 5px 10px 5px rgba(48, 48, 48, 0.2);
+    }
+
+    #projets {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        margin: 0;
+        margin-bottom: 10vh;
+    }
+
+    #contact {
+        height: 60vh;
+    }
+    
+    .titre-contact {
+        font-size: 1.5rem;
+        height: 2vh;
+        padding: 6vh 0;
+    }
+    
+    .infos-contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 4vh;
+        font-family: "Anybody", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    
+    .infos-contact a {
+        font-family: "Anybody", sans-serif;
+        font-size: 1.1rem;
+        color: #e8a6d7 !important;
+        font-weight: 400 !important;
+    }
+    
+    .infos-contact a:hover {
+        color: #926486 !important;
+    }
+    
+    .infos-contact li {
+        padding: 3vh 0 1vh 3vh;
+        width: 80%;
+        list-style-image: url(images/empty-star.png);
+    }
+    
+    #linkedin:hover {
+        padding-left: 0;
+    }
+
+    .footer {
+        height: 20vh;
+    }
+}
