@@ -13,6 +13,8 @@
     src: url(fonts/Anybody-VariableFont_wdth\,wght.ttf);
 }
 
+/* Format ordinateur */
+
 main {
     display: flex;
     flex-direction: column;
@@ -346,7 +348,94 @@ a:hover {
     height: 30vh;
 }
 
-@media only screen and (max-width: 900px) {
+/* Format tablette */
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    #projets {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 2vh;
+    }
+
+    .card {
+        margin: 0;
+        margin-bottom: 10vh;
+    }
+
+    .card-container {
+        width: 90%;
+        height: 50vh;
+        margin: 15vh auto 15vh;
+    }
+
+    .card-back .pres {
+        width: 85%;
+        font-size: 1.4rem;
+    }
+
+    .white-block {
+        height: 105vh;
+    }
+
+    #contact {
+        height: 70vh;
+    }
+
+    .footer {
+        height: 20vh;
+    }
+
+    .bienvenue {
+        padding-left: 4vw;
+    }
+
+    .gros-titre-comp {
+        padding: 5.5vh 0;
+    }
+    
+    .comp-titre {
+        padding-top: 6vh;
+    }
+    
+    .comp-sous-titre {
+        padding-top: 2vh;
+    }
+    
+    .images {
+        padding-top: 1vh;
+    }
+
+    .projets-title {
+        margin-top: 12vh;
+        margin-bottom: 6vh;
+        padding: 6vh 0;
+    }
+
+    #projets {
+        margin-top: 6vh;
+    }
+
+    #contact {
+        height: 50vh;
+    }
+    
+    .titre-contact {
+        padding: 5vh 0;
+    }
+    
+    .infos-contact {
+        margin-top: 5vh;
+    }
+    
+    .footer {
+        height: 15vh;
+    }
+}
+
+
+/* Format smartphone */
+
+@media only screen and (max-width: 768px) {
     .title {
         font-family: "Net Druk Wide", sans-serif;
         text-align: end;
@@ -423,7 +512,7 @@ a:hover {
     }
 
     .white-block {
-        height: 155vh;
+        height: 160vh;
     }
     
     .gros-titre-comp {
