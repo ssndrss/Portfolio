@@ -192,7 +192,7 @@ a:hover {
 
 .white-block {
     background-color: white;
-    height: 220vh;
+    height: 225vh;
 }
 
 .gros-titre-comp {
@@ -274,6 +274,10 @@ a:hover {
     border: 0px;
     box-shadow: 0px 5px 10px 5px rgba(48, 48, 48, 0.2);
     transition: ease-in-out 0.3s;
+}
+
+#card1, #card2, #card3 { 
+    opacity: 0;
 }
 
 .card:hover {
