@@ -102,7 +102,7 @@ a:hover {
 
 #top {
     position: absolute;
-    bottom: 0.2vh;
+    bottom: 0vh;
     right: 2vw;
 }
 
@@ -115,7 +115,7 @@ a:hover {
 .card-container {
     font-weight: 600;
     display: flex;
-    width: 60%;
+    width: 70%;
     height: 80vh;
     perspective: 1000px;
     margin: 30vh auto 30vh;
@@ -192,7 +192,7 @@ a:hover {
 
 .white-block {
     background-color: white;
-    height: 225vh;
+    height: 230vh;
 }
 
 .gros-titre-comp {
@@ -207,7 +207,7 @@ a:hover {
 }
 
 .line {
-    width: 70%;
+    width: 0%;
     height: 0.2vh;
     margin: 0 auto;
     margin-top: 3vh;
@@ -232,6 +232,10 @@ a:hover {
 
 .images {
     padding: 6vh 0 0 14.5vw;
+}
+
+#image1, #image2, #image3, #image4, #image5, #image6, #image7, #image8 {
+    scale: 0;
 }
 
 #compétences img {
@@ -352,9 +356,30 @@ a:hover {
     height: 30vh;
 }
 
-/* Format tablette */
 
-@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+/* Formats tablettes */
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .white-block {
+        height: 145vh;
+    }
+
+    .comp-titre {
+        padding-top: 5vh;
+    }
+    
+    .comp-sous-titre {
+        padding-top: 1vh;
+    }
+    
+    .images {
+        padding-top: 1vh;
+        padding-bottom: 2vh;
+    }
+}
+
+@media only screen and (min-width: 814px) and (max-width: 992px) {
     #projets {
         flex-wrap: wrap;
         justify-content: space-around;
@@ -378,7 +403,7 @@ a:hover {
     }
 
     .white-block {
-        height: 105vh;
+        height: 125vh;
     }
 
     #contact {
@@ -439,6 +464,39 @@ a:hover {
 
 /* Format smartphone */
 
+@media only screen and (min-width: 768px) and (max-width: 813px) {
+    .white-block {
+        height: 135vh;
+    }
+
+    .gros-titre-comp {
+        padding: 5.5vh 0;
+    }
+    
+    .comp-titre {
+        padding-top: 6vh;
+    }
+    
+    .comp-sous-titre {
+        padding-top: 2vh;
+    }
+    
+    .images {
+        padding-top: 1vh;
+        padding-bottom: 2vh;
+        display: flex;
+    }
+    #projets {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 2vh;
+    }
+    .card {
+        margin: 0;
+        margin-bottom: 10vh;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .title {
         font-family: "Net Druk Wide", sans-serif;
@@ -488,7 +546,7 @@ a:hover {
     }
     
     #bottom {
-        top: 30vh;
+        top: 32vh;
         right: 3vw;
     }
 
@@ -516,51 +574,60 @@ a:hover {
     }
 
     .white-block {
-        height: 160vh;
+        height: 165vh;
+    }
+
+    #compétences {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding-left: 0;
     }
     
     .gros-titre-comp {
         font-size: 1.5rem;
+        padding: 5vh 0;
     }
     
     .line {
-        width: 70%;
         height: 0.2vh;
         margin: 0 auto;
-        margin-top: 3vh;
+        margin-top: 1vh;
         background-color: black;
     }
     
     .comp {
         width: 80%;
+        padding-left: 0;
     }
     
     .comp-titre {
         font-family: "Net Druk Wide", sans-serif;
         font-size: 1.2rem;
-        padding: 5vh 0 0 14.5vw;
+        text-align: center;
+        padding: 0.1vh 0 0 0vw;
     }
     
     .comp-sous-titre {
         font-family: "Anybody", sans-serif;
         font-weight: 600;
+        text-align: center;
         margin-bottom: 0;
-        padding-top: 2vh;
-        padding-bottom: 0;
+        padding: 2vh 0 0 0;
     }
     
     .images {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        padding-top: 2vh;
-        padding-bottom: 3vh;
+        justify-content: center;
+        padding: 2vh 0 3vh 0;
     }
     
     #compétences img {
         height: 80px;
         width: 80px;
-        margin-bottom: 2vh;
+        margin: 0 1vh 2vh 1vh;
         padding: 12px;
         border-radius: 30px;
     }
